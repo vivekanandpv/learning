@@ -5,8 +5,27 @@ import AddCustomer from './AddCustomer';
 import CustomerDetails from './CustomerDetails';
 
 class CustomersList extends Component {
+  state = {
+    bankCustomers: [...customers],
+    selectedCustomer: null,
+  };
+
   handleAddCustomer = (customer) => {
-    console.log('Add Customer', customer);
+    // console.log('Add Customer', customer);
+    this.setState((state, props) => {
+      const newCustomers = [...state.bankCustomers]; //  clone
+
+      customer.id = newCustomers.length + 1;
+
+      newCustomers.push(customer);
+      return { bankCustomers: newCustomers };
+    });
+  };
+
+  handleCurrentCustomerSelection = (customer) => {
+    this.setState((state, props) => {
+      return { selectedCustomer: customer };
+    });
   };
 
   render() {
@@ -15,7 +34,10 @@ class CustomersList extends Component {
         <div className='container my-5'>
           <div className='row'>
             <div className='col'>
-              <CustomerTable customers={customers} />
+              <CustomerTable
+                customers={this.state.bankCustomers}
+                onSelection={this.handleCurrentCustomerSelection}
+              />
             </div>
           </div>
           <div className='row'>
@@ -23,12 +45,7 @@ class CustomersList extends Component {
               <AddCustomer onAdd={this.handleAddCustomer} />
             </div>
             <div className='col-md-6'>
-              <CustomerDetails
-                id={12}
-                firstName='Bill'
-                lastName='Gates'
-                email='bill@microsoft.com'
-              />
+              <CustomerDetails customer={this.state.selectedCustomer} />
             </div>
           </div>
         </div>
