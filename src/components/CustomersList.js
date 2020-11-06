@@ -1,32 +1,33 @@
 import React, { Component, Fragment } from 'react';
 import customers from '../data/data.json';
+import CustomerTable from './CustomerTable';
+import AddCustomer from './AddCustomer';
+import CustomerDetails from './CustomerDetails';
 
 class CustomersList extends Component {
   render() {
     return (
       <Fragment>
-        <table className='table table-bordered table-sm'>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {customers.map((c) => {
-              return (
-                <tr key={c.id}>
-                  <td>{c.id}</td>
-                  <td>{c.firstName}</td>
-                  <td>{c.lastName}</td>
-                  <td>{c.email}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <div className='container my-5'>
+          <div className='row'>
+            <div className='col'>
+              <CustomerTable customers={customers} />
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-md-6'>
+              <AddCustomer />
+            </div>
+            <div className='col-md-6'>
+              <CustomerDetails
+                id={12}
+                firstName='Bill'
+                lastName='Gates'
+                email='bill@microsoft.com'
+              />
+            </div>
+          </div>
+        </div>
       </Fragment>
     );
   }

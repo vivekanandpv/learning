@@ -7,26 +7,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <div className='container my-5'>
-          <div className='row'>
-            <div className='col'>
-              <CustomersList />
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-md-6'>
-              <AddCustomer />
-            </div>
-            <div className='col-md-6'>
-              <CustomerDetails
-                id={12}
-                firstName='Bill'
-                lastName='Gates'
-                email='bill@microsoft.com'
-              />
-            </div>
-          </div>
-        </div>
+        <CustomersList />
       </Fragment>
     );
   }
