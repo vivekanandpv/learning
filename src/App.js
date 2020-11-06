@@ -18,7 +18,12 @@ class App extends Component {
               <AddCustomer />
             </div>
             <div className='col-md-6'>
-              <CustomerDetails />
+              <CustomerDetails
+                id={12}
+                firstName='Bill'
+                lastName='Gates'
+                email='bill@microsoft.com'
+              />
             </div>
           </div>
         </div>
