@@ -5,6 +5,10 @@ import AddCustomer from './AddCustomer';
 import CustomerDetails from './CustomerDetails';
 
 class CustomersList extends Component {
+  handleAddCustomer = (customer) => {
+    console.log('Add Customer', customer);
+  };
+
   render() {
     return (
       <Fragment>
@@ -16,7 +20,7 @@ class CustomersList extends Component {
           </div>
           <div className='row'>
             <div className='col-md-6'>
-              <AddCustomer />
+              <AddCustomer onAdd={this.handleAddCustomer} />
             </div>
             <div className='col-md-6'>
               <CustomerDetails
