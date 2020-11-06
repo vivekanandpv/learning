@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "firstName": "Jeno",
+    "lastName": "Rowbury",
+    "email": "jrowbury0@oracle.com"
+  },
+  {
+    "id": 2,
+    "firstName": "Kerry",
+    "lastName": "Morden",
+    "email": "kmorden1@devhub.com"
+  },
+  {
+    "id": 3,
+    "firstName": "Guglielma",
+    "lastName": "Tomasutti",
+    "email": "gtomasutti2@upenn.edu"
+  },
+  {
+    "id": 4,
+    "firstName": "Cordelia",
+    "lastName": "Lay",
+    "email": "clay3@flickr.com"
+  },
+  {
+    "id": 5,
+    "firstName": "Guenna",
+    "lastName": "Sesser",
+    "email": "gsesser4@seattletimes.com"
+  },
+  {
+    "id": 6,
+    "firstName": "Obediah",
+    "lastName": "Lortzing",
+    "email": "olortzing5@chronoengine.com"
+  },
+  {
+    "id": 7,
+    "firstName": "Romonda",
+    "lastName": "Bewshea",
+    "email": "rbewshea6@vkontakte.ru"
+  },
+  {
+    "id": 8,
+    "firstName": "Peyton",
+    "lastName": "de Courcy",
+    "email": "pdecourcy7@indiatimes.com"
+  }
+]
